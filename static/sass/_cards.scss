@@ -1,0 +1,66 @@
+/* CARDS */
+.cards {
+    padding: 20px;
+    margin: 0 auto;
+   
+    background: $primary-secondary;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+    grid-template-rows: repeat(3, 1fr );
+    grid-gap: 10px;
+    padding: 0 20px;   
+    
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid #ccc;
+    padding: 20px;
+
+    .fa-arrow-right {
+        align-self: flex-end;
+    }
+    
+    .fa-arrow-left {
+       
+        align-self: flex-start;
+    }
+
+
+    .card-title  {
+        text-align: center;
+        padding: 20px;
+    }   
+
+    .card-content {
+    text-align: center;
+
+    .card-redes {
+        display: flex;
+        justify-content: center;
+       padding-top: 15px;
+       list-style: none;
+       li {
+        margin-right: 15px;
+    }
+       
+    }
+    }
+
+    img {
+        object-fit: cover;
+        width:70px;
+        height:70px;
+        border-radius: 50px;  
+    }
+}
+
+
+
+
+
+

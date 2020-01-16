@@ -1,0 +1,17 @@
+.card_btn {
+    padding: 10px;
+    background-color: $color-green;
+    width: 100%;
+    border: 0px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: $color-white;
+    
+    &:hover{
+        background-color: $color-black;
+        
+        
+      }
+  }
+  
+  

@@ -1,0 +1,29 @@
+/* LAYOUT */
+.wrapper {
+    display: grid;
+    grid-template: 100px 1fr 80px / 200px 1fr ;
+    grid-gap: 10px;
+    min-height: 100vh;
+    grid-template-areas: 'header header'
+                         'sedes  cards'
+                         'footer footer'        ;
+}
+.header {
+    grid-area: header;
+    
+}
+
+.sedes {
+    grid-area: sedes;
+ 
+}
+.cards {
+    grid-area: cards;
+ 
+
+}
+.footer {
+    grid-area: footer;
+   
+
+}

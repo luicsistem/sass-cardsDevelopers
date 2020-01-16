@@ -1,0 +1,304 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* VARIABLES */
+/* GLOBALES */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  color: #000000;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+/* LAYOUT */
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px 1fr 80px;
+  -ms-grid-columns: 200px 1fr;
+      grid-template: 100px 1fr 80px / 200px 1fr;
+  grid-gap: 10px;
+  min-height: 100vh;
+      grid-template-areas: 'header header' 'sedes  cards' 'footer footer';
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+.sedes {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sedes;
+}
+
+.cards {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cards;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+}
+
+/* HEADER */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  background: #272343;
+  color: #fff;
+}
+
+.header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* MENU HEADER */
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 30px;
+  width: 100px;
+  line-height: 50px;
+}
+
+.menu li:first-child {
+  border-bottom: 3px solid #537ec5;
+}
+
+.menu a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.menu a:hover {
+  border-bottom: 3px solid;
+  background: #000000;
+}
+
+/* SEDES */
+.sedes {
+  padding: 10px;
+  background-color: #e3f6f5;
+}
+
+.sedes h2 {
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.ul-sedes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 20px;
+  list-style: none;
+}
+
+.ul-sedes li {
+  margin-bottom: 15px;
+  padding-left: 10px;
+  border-radius: 3px;
+}
+
+.ul-sedes li:first-child {
+  background-color: #537ec5;
+}
+
+.ul-sedes li:last-child {
+  background-color: #7d9ed1;
+}
+
+/* CARDS */
+.cards {
+  padding: 20px;
+  margin: 0 auto;
+  background: #e3f6f5;
+}
+
+.card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 0 20px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: 1px solid #ccc;
+  padding: 20px;
+}
+
+.card .fa-arrow-right {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.card .fa-arrow-left {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.card .card-title {
+  text-align: center;
+  padding: 20px;
+}
+
+.card .card-content {
+  text-align: center;
+}
+
+.card .card-content .card-redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 15px;
+  list-style: none;
+}
+
+.card .card-content .card-redes li {
+  margin-right: 15px;
+}
+
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+}
+
+.card_btn {
+  padding: 10px;
+  background-color: #63a426;
+  width: 100%;
+  border: 0px;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.card_btn:hover {
+  background-color: #000000;
+}
+
+/* FOOTER */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 20px;
+  background-color: #272343;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */

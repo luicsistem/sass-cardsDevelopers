@@ -1,0 +1,22 @@
+/* GLOBALES */
+* {
+    box-sizing: border-box;
+   
+}
+
+
+body {
+    
+    font-family: $font-family-global;
+    color: $color-black;
+}
+
+
+a {
+    color: $color-white;
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: bold;
+}
